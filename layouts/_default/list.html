@@ -1,9 +1,0 @@
-{{ define "main" }}
-    {{ .Content }}
-    {{ if .Params.list_pages }}
-        <ul class="child-pages">
-            {{ range .Paginator.Pages.ByWeight }} {{ partial "page-summary" . }} {{ end }}
-            <section>{{ partial "pagination" .}}</section>
-        </ul>
-    {{ end }}
-{{ end }}
